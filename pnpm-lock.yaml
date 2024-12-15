@@ -4,21 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  picomatch@4.0.2:
-    hash: uwrylfsjnx37nmis4n6nyhyebu
-    path: patches/picomatch@4.0.2.patch
-
 importers:
 
   .:
     dependencies:
       fdir:
         specifier: ^6.4.2
-        version: 6.4.2(picomatch@4.0.2(patch_hash=uwrylfsjnx37nmis4n6nyhyebu))
-      picomatch:
-        specifier: ^4.0.2
-        version: 4.0.2(patch_hash=uwrylfsjnx37nmis4n6nyhyebu)
+        version: 6.4.2(picomatch@4.0.2)
+      unmatch:
+        specifier: ^1.0.1
+        version: 1.0.1
     devDependencies:
       '@biomejs/biome':
         specifier: ^1.9.4
@@ -26,9 +21,6 @@ importers:
       '@types/node':
         specifier: ^22.9.0
         version: 22.9.0
-      '@types/picomatch':
-        specifier: ^3.0.1
-        version: 3.0.1
       fs-fixture:
         specifier: ^2.6.0
         version: 2.6.0
@@ -360,9 +352,6 @@ packages:
   '@types/node@22.9.0':
     resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
 
-  '@types/picomatch@3.0.1':
-    resolution: {integrity: sha512-1MRgzpzY0hOp9pW/kLRxeQhUWwil6gnrUYd3oEpeYBqp/FexhaCPv3F8LsYr47gtUU45fO2cm1dbwkSrHEo8Uw==}
-
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
@@ -663,6 +652,10 @@ packages:
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
+  unmatch@1.0.1:
+    resolution: {integrity: sha512-Fe6Mi4RUci7pappunyfLbU0m+vq4xNkgjXXMmMzv58F3hQs3N4fg1oiAeGE7P6O8y6g+ck3RpbMn5CiLTHHysQ==}
+    engines: {node: '>=12'}
+
   webidl-conversions@4.0.2:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
 
@@ -880,8 +873,6 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
-  '@types/picomatch@3.0.1': {}
-
   ansi-regex@5.0.1: {}
 
   ansi-regex@6.1.0: {}
@@ -964,9 +955,9 @@ snapshots:
       '@esbuild/win32-ia32': 0.24.0
       '@esbuild/win32-x64': 0.24.0
 
-  fdir@6.4.2(picomatch@4.0.2(patch_hash=uwrylfsjnx37nmis4n6nyhyebu)):
+  fdir@6.4.2(picomatch@4.0.2):
     optionalDependencies:
-      picomatch: 4.0.2(patch_hash=uwrylfsjnx37nmis4n6nyhyebu)
+      picomatch: 4.0.2
 
   foreground-child@3.3.0:
     dependencies:
@@ -1036,7 +1027,7 @@ snapshots:
 
   picocolors@1.1.1: {}
 
-  picomatch@4.0.2(patch_hash=uwrylfsjnx37nmis4n6nyhyebu): {}
+  picomatch@4.0.2: {}
 
   pirates@4.0.6: {}
 
@@ -1128,8 +1119,8 @@ snapshots:
 
   tinyglobby@0.2.10:
     dependencies:
-      fdir: 6.4.2(picomatch@4.0.2(patch_hash=uwrylfsjnx37nmis4n6nyhyebu))
-      picomatch: 4.0.2(patch_hash=uwrylfsjnx37nmis4n6nyhyebu)
+      fdir: 6.4.2(picomatch@4.0.2)
+      picomatch: 4.0.2
 
   tr46@1.0.1:
     dependencies:
@@ -1168,6 +1159,8 @@ snapshots:
   typescript@5.6.3: {}
 
   undici-types@6.19.8: {}
+
+  unmatch@1.0.1: {}
 
   webidl-conversions@4.0.2: {}
 
